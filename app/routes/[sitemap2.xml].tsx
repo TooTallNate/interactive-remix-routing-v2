@@ -2,6 +2,10 @@ import RouteWrapper from "~/components/wrappers/RouteWrapper";
 import generateMeta from "~/utils/generateMeta";
 import type { HandleCustom } from "~/components/Breadcrumbs/Breadcrumbs";
 
+export const config = {
+  name: "routes/[sitemap2.xml]"
+};
+
 export const handle: HandleCustom = {
   links: [{ label: "Sitemap 2", link: "/sitemap2.xml", key: "Sitemap-2" }],
 };
