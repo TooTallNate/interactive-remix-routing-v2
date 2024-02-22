@@ -2,5 +2,6 @@ node_modules
 
 /.cache
 /public/build
-/.netlify
+/build
 .env
+.vercel

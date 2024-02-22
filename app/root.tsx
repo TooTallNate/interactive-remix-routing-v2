@@ -1,22 +1,21 @@
-import type { LinksFunction, V2_MetaFunction } from "@remix-run/node";
+import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import {
   Links,
-  LiveReload,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
   useMatches,
 } from "@remix-run/react";
-import tailwind from "./tailwind.css";
-import styles from "./styles.css";
+import tailwind from "~/tailwind.css?url";
+import styles from "~/styles.css?url";
 import Sidebar from "~/components/Sidebar";
 import Header from "~/components/Header";
 import Breadcrumbs from "~/components/Breadcrumbs";
 import LayoutWrapper from "~/components/wrappers/LayoutWrapper";
 import { useCallback, useMemo, useState } from "react";
 
-export const meta: V2_MetaFunction = () => {
+export const meta: MetaFunction = () => {
   return [
     { title: "Remix Routing V2" },
     {
@@ -74,7 +73,6 @@ export default function App() {
 
         <ScrollRestoration />
         <Scripts />
-        <LiveReload />
       </body>
     </html>
   );

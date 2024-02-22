@@ -1,6 +1,6 @@
-import type { V2_MetaFunction } from "@remix-run/node";
+import type { MetaFunction } from "@remix-run/node";
 
-const generateMeta = (title: string): V2_MetaFunction => {
+const generateMeta = (title: string): MetaFunction => {
   return () => {
     return [
       { title: `${title} | Remix Routing V2` },
